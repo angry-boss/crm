@@ -1,0 +1,17 @@
+#about{ hidden }
+  %h3
+    #{t :about_ffc_version}
+    %span.cool== v#{CRM::VERSION::STRING}
+    == (#{ActiveRecord::Base.connection.adapter_name.downcase})
+  %p
+    #{t :about_thank_you}
+
+  #{t :about_ffc_resources}:
+  %ul
+    %li== &raquo; #{link_to t(:about_home_page), "http://www.CRM.com", :"data-popup" => true}
+    %li== &raquo; #{link_to t(:about_project_page), "https://github.com/CRM/crm/tree/master", :"data-popup" => true}
+    %li== &raquo; #{link_to t(:about_features), "https://github.com/CRM/crm/issues", :"data-popup" => true}
+    %li== &raquo; #{link_to t(:about_twitter), "https://twitter.com/CRM", :"data-popup" => true}
+    %li== &raquo; #{link_to t(:about_user_group), "https://groups.google.com/group/fat-free-crm-users", :"data-popup" => true}
+    %li== &raquo; #{link_to t(:about_dev_group), "https://groups.google.com/group/fat-free-crm-dev", :"data-popup" => true}
+  %br
